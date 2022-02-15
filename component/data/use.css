@@ -1,0 +1,75 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: auto;
+    color: black;
+    background-color: gray;
+}
+.hello{
+    width:20%;
+    box-shadow: 0px 4px 8px 0px;
+    height: 750px;
+    border: 1px solid rgb(119, 65, 65);
+    float: left;
+    margin-left: 40px;
+    margin: 20px;
+    border-radius: 0px 15px 0px 15px;
+    text-shadow: -15px white;
+    position: relative;
+    margin-left: 40px;
+}
+.hello::before{
+    background-color: white;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    border-radius: 0px 15px 0px 15px;
+    opacity: 0.5;
+    z-index: -1;
+    transition: height 2s ease;
+}
+.hello:hover::before{
+    height: 100%;
+}
+.hello>h1{
+    text-align: center;
+}
+img{
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    margin-left: 12px;
+    transition: width 1s;
+
+}
+img:hover{
+    height:280px ;
+}
+.btn{
+    margin-top:0px;
+}
+/** Trên màn hình ipad*/
+@media(max-width:1024px){
+    img{
+        width: 250px;
+    }
+    .hello{
+        width: 26%;
+        left: 10px;
+    }
+}
+/* Tren man hinh dien thoa */
+@media(max-width:375px){
+    img{
+        width: 75px;
+    }
+    .hello{
+        width: 26%;
+        left: 10px;
+    }
+}
